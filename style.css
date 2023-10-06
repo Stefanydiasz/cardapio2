@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    font-family: 'Lobster Two', cursive;
+font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    background-image: url(./img/back.granulado.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:#000000;
+    font-size: 1rem;
+}
+
+a:hover {
+    color:#63a6e6;
+}
+
+/*HEADER*/
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 95px;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+font-size: 20px;
+}
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn {
+    color: rgb(224, 133, 15);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action-btn {
+    background-color: #ffa65e;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.action-btn:hover {
+    scale: 1.05;
+    color: #63a6e6;
+}
+.action-btn:active {
+    scale: 0.95;
+}
+
+/*dropmenu*/
+
+
+.dropdown-menu {
+    display: none;
+    position:absolute ;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: #ffa75e9f;
+    backdrop-filter: blur(15px);
+    border-radius:10px ;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 240px;
+    }
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*Sobre*/
+
+#sobre {
+    height: calc(100vh - 95px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobre h1 {
+    font-size: 70px;
+    font-weight: bold;
+    color:#000000;
+    padding-bottom: 3px;
+
+}
+
+#sobre p {
+font-size: 18px;
+font-weight: 600;
+}
+
+/*cardapio*/
+
+.container {
+display: flex;
+justify-content: space-evenly ;
+}
+.card {
+    width: 250px;
+    height: 360px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-img img {
+    width: 250px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.card-texto {
+    text-align: center;
+    font-weight: 600;
+}
+
+.cardapio {
+    text-align: center;
+    padding: 100px;
+}
+
+.cardapio h1 {
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+.cardapio h2 {
+    margin-top: 30px;
+}
+
+
+
+.btn-card {
+    padding: 3px 40px;
+    font-size: 20px;
+    background-color: rgb(198, 248, 248);
+    border: none;
+    cursor: pointer;
+}
+
+/*Contato*/
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #ffb2b2;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #ff9a27;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+.titulo {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8fffc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsividade*/
+
+
+@media(max-width:992px){
+    .navbar .links,
+    .navbar .action-btn {
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+    #sobre {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin: 1rem;
+    }
+    #sobre h1 {
+        font-size: 35px;
+    }
+    #sobre img {
+        width: 200px;
+    }
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width:576px) {
+    .dropdown-menu{
+        left: 2rem ;
+        width: unset;
+    }
+}
